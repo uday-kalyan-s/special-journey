@@ -1,0 +1,28 @@
+services:
+  node-server:
+    build:
+      context: './'
+      dockerfile: Dockerfile.node
+      args:
+        - PORT=${SITE_PORT}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/backend
+      - node_modules:/backend/node_modules
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo-server
+  mongo-server:
+    image: mongo:latest
+    command: mongod --logpath /dev/null
+    volumes:
+      - ./data:/data/db
+    env_file:
+      - ./.env
+    ports:
+      - "27017:27017"
+
+volumes:
+  node_modules:

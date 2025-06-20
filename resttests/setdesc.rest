@@ -1,0 +1,7 @@
+PUT http://localhost:3000/me
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXkiLCJpYXQiOjE3NDkyNjY0OTIsImV4cCI6MTc0OTI3MDA5Mn0.B2ViysqIuFwftnDF6EfsXbi3zlqLOKfVxKl83GugQpo
+
+{
+    "description": "gurt: yo"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "node-server",
+  "dockerComposeFile": [
+    "../docker-compose.yaml"
+  ],
+  "service": "node-server",
+  "workspaceFolder": "/backend",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+        "extensions": [
+        ]
+    }
+  }
+}
